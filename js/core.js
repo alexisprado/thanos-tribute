@@ -1,0 +1,4 @@
+
+window.hmbr = {
+    thanosTribute: {}
+}
