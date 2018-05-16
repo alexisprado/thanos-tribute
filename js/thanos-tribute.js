@@ -14,7 +14,7 @@ $( function(){
             particlesAmountCoefficient: 4,
             oscillationCoefficient: 2
             ,direction: 'top'
-            ,color: '#333'
+            ,color: '#a71814'
             ,duration: 10000
         },
 
@@ -22,18 +22,20 @@ $( function(){
             var bttn = $(".spider-man")[0];
             var particles = new Particles(bttn, self.options);
 
-            setTimeout( function() {
-                if ( !particles.isAnimating()){ 
-                    particles.disintegrate();
-                }
-            }, 2000);
-
+            if ( !particles.isAnimating()){ 
+                particles.disintegrate();
+            }
         };
         
         return {
             init: function(){
                 self.container = $(".thanos-tribute-container");
-                self.init();
+                setTimeout( function() {
+                    $(".spider-man").addClass("punch");
+                    setTimeout( function() {
+                        self.init();
+                    }, 1300);
+                }, 800);
             }
         }
     };
